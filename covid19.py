@@ -15,13 +15,7 @@ import datetime
 #####################################################################################################################################
 external_stylesheets = ['https://codepen.io/unicorndy/pen/GRJXrvP.css','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css']
 
-#Insert your javascript here. In this example, addthis.com has been added to the web app for people to share their webpage
-external_scripts = [{
-        'type': 'text/javascript', #depends on your application
-        'src': 'insert your addthis.com js here',
-    }]
-
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets, external_scripts = external_scripts)
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 app.title = 'Covid19 - Global Dashboard Example'
 
 #for heroku to run correctly
@@ -207,7 +201,7 @@ map_data = map_data.sort_values("new").drop('new', axis=1)
 #############################################################################
 # mapbox_access_token keys, not all mapbox function require token to function. 
 #############################################################################
-mapbox_access_token = 'insert your token here'
+mapbox_access_token = 'pk.eyJ1IjoibWVyd2luZG1lbGxvIiwiYSI6ImNrYTVzbXM2NzAwNGMzNG52MWJvMXpudW4ifQ.Zaq6ldTyoZdxNmFOa_y1jA'
 
 ###########################
 # functions to create map
